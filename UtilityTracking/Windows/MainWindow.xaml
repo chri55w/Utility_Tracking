@@ -1,0 +1,81 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:User_Controls="clr-namespace:UtilityTracking.User_Controls"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        x:Class="UtilityTracking.MainWindow"
+        Title="Utilities Tracker" Height="420" Width="860"
+        GlowBrush="Gray"
+        MinHeight="420"
+        MinWidth="740"
+    >
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Top">
+            <Button Name="AddBttn" Click="AppAddItem_Click" HorizontalAlignment="Left" Padding="10,0" Controls:ButtonHelper.CornerRadius="5" Content="Add" Margin="2"/>
+        </StackPanel>
+        <ComboBox Grid.Row="1" Grid.Column="2" Name="TimePeriodSelector" HorizontalAlignment="Right" Margin="0" Padding="10,0" VerticalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem>This Week</ComboBoxItem>
+            <ComboBoxItem>This Month</ComboBoxItem>
+            <ComboBoxItem>This Year</ComboBoxItem>
+            <ComboBoxItem>Past Week</ComboBoxItem>
+            <ComboBoxItem>Past Month</ComboBoxItem>
+            <ComboBoxItem>Past Year</ComboBoxItem>
+            <ComboBoxItem>All Records</ComboBoxItem>
+        </ComboBox>
+        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <TabItem Header="Gas Records" FontFamily="Candara">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="15" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Record Date / Time" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <TextBlock Text="Balance" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <TextBlock Text="Top Up Value" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <ListBox Grid.Row="1" Grid.ColumnSpan="4" Name="GasRecordListBox"/>
+                    <User_Controls:CalculationPanel Grid.Column="5" Grid.RowSpan="2" VerticalAlignment="Top" Height="285" x:Name="GasCalculations"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Electricity Records" FontFamily="Candara">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Record Date / Time" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <TextBlock Text="Balance" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <TextBlock Text="Top Up Value" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
+                    <ListBox Grid.Row="1" Grid.ColumnSpan="3" Name="ElectricRecordListBox" />
+                    <User_Controls:CalculationPanel Grid.Column="4" Grid.RowSpan="2" VerticalAlignment="Top" Height="285" x:Name="ElectricCalculations"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

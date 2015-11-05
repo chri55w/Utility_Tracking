@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="UtilityTracking.User_Controls.RecordObject"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UtilityTracking.User_Controls"
+             mc:Ignorable="d"
+             MouseRightButtonDown="UserControl_MouseRightButtonDown">
+    <UserControl.ContextMenu>
+        <ContextMenu Name="m_ContextMenu" >
+            <MenuItem Header="Delete" Click="MenuItem_Click"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid Margin="2,2" Background="#33000000" IsEnabled="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock IsEnabled="False" HorizontalAlignment="Center" Margin="0,0,0,0" Text="{Binding Path=FormattedRecordDateTime}" VerticalAlignment="Center" Grid.Column="0" FontFamily="Candara"/>
+        <TextBlock IsEnabled="False" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Path=BalanceString}" VerticalAlignment="Center" Grid.Column="1" FontFamily="Candara"/>
+        <TextBlock IsEnabled="False" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Path=TopUpString}" VerticalAlignment="Center" Grid.Column="2" FontFamily="Candara"/>
+    </Grid>
+</UserControl>

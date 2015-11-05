@@ -1,0 +1,115 @@
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe.config
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\App.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.g.resources
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.Properties.Resources.resources
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csproj.GenerateResource.Cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.lref
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe.config
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\App.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.lref
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.g.resources
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.Properties.Resources.resources
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csproj.GenerateResource.Cache
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\User Controls\CalculationPanel.baml
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\User Controls\CalculationPanel.g.cs
+C:\Users\Chris\Desktop\UtilityTracking\UtilityTracking\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe.config
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.exe
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\UtilityTracking.pdb
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\User Controls\CalculationPanel.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Windows\AddRecord.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\App.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.cache
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking_MarkupCompile.lref
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\User Controls\CalculationPanel.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\User Controls\RecordObject.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Windows\MainWindow.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.g.resources
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.Properties.Resources.resources
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\UtilityTracking.csproj.GenerateResource.Cache
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\MahApps.Metro.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\bin\Debug\MahApps.Metro.xml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Resources\Icons.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\App.baml
+C:\Users\Chris\Desktop\Personal Projects\Application Development\UtilityTracking\UtilityTracking\obj\Debug\Resources\Icons.g.cs
