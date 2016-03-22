@@ -3,79 +3,112 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:User_Controls="clr-namespace:UtilityTracking.User_Controls"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:viewModels="clr-namespace:UtilityTracking.ViewModels"
+        xmlns:ia="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         x:Class="UtilityTracking.MainWindow"
         Title="Utilities Tracker" Height="420" Width="860"
         GlowBrush="Gray"
         MinHeight="420"
         MinWidth="740"
+        WindowStartupLocation="CenterScreen"
     >
-    <Grid Margin="0,0,0,0">
+    <Controls:MetroWindow.Resources>
+        <Style x:Key="MyCleanWindowStyle" TargetType="{x:Type Controls:MetroWindow}" BasedOn="{StaticResource CleanWindowStyleKey}" />
+    </Controls:MetroWindow.Resources>
+    <Controls:MetroWindow.DataContext>
+        <viewModels:MainViewModel/>
+    </Controls:MetroWindow.DataContext>
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="Add New Record" Command="{Binding AddNewRecordCommand}"/>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout IsOpen="{Binding AddNewRecordFlyoutIsOpen, UpdateSourceTrigger=PropertyChanged}" Width="250" Header="Add New Record" Theme="Accent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <ComboBox Grid.Row="0" Margin="15,3" ItemsSource="{Binding RecordTypes, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedItem="{Binding NewRecordSelectedType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <wpfTool:DateTimePicker Grid.Row="1" Margin="15,3" Format="Custom" FormatString="dd-MMM-yy HH:mm" TextAlignment="Center" Value="{Binding NewRecordDateTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Row="2" Margin="15,3" Controls:TextBoxHelper.Watermark="Balance" Text="{Binding NewRecordBalance, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center">
+                        <ia:Interaction.Triggers>
+                            <ia:EventTrigger EventName="LostFocus">
+                                <ia:InvokeCommandAction Command="{Binding NewRecordBalanceLostFocusCommand}"/>
+                            </ia:EventTrigger>
+                        </ia:Interaction.Triggers>
+                    </TextBox>
+                    <TextBox Grid.Row="3" Margin="15,3" Controls:TextBoxHelper.Watermark="TopUp" Text="{Binding NewRecordTopUp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center">
+                        <ia:Interaction.Triggers>
+                            <ia:EventTrigger EventName="LostFocus">
+                                <ia:InvokeCommandAction Command="{Binding NewRecordTopUpLostFocusCommand}"/>
+                            </ia:EventTrigger>
+                        </ia:Interaction.Triggers>
+                    </TextBox>
+                    <Button Content="Add Record" Grid.Row="4" Margin="25,3" Command="{Binding SubmitAddNewRecordCommand, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>                
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+    
+    <Grid Margin="15">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Top">
-            <Button Name="AddBttn" Click="AppAddItem_Click" HorizontalAlignment="Left" Padding="10,0" Controls:ButtonHelper.CornerRadius="5" Content="Add" Margin="2"/>
-        </StackPanel>
-        <ComboBox Grid.Row="1" Grid.Column="2" Name="TimePeriodSelector" HorizontalAlignment="Right" Margin="0" Padding="10,0" VerticalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" >
-            <ComboBoxItem>This Week</ComboBoxItem>
-            <ComboBoxItem>This Month</ComboBoxItem>
-            <ComboBoxItem>This Year</ComboBoxItem>
-            <ComboBoxItem>Past Week</ComboBoxItem>
-            <ComboBoxItem>Past Month</ComboBoxItem>
-            <ComboBoxItem>Past Year</ComboBoxItem>
-            <ComboBoxItem>All Records</ComboBoxItem>
-        </ComboBox>
-        <TabControl Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
-            <TabItem Header="Gas Records" FontFamily="Candara">
+        <TabControl Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TabItem Header="Gas Records">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="15" />
-                        <ColumnDefinition Width="10" />
-                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="Record Date / Time" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <TextBlock Text="Balance" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <TextBlock Text="Top Up Value" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <ListBox Grid.Row="1" Grid.ColumnSpan="4" Name="GasRecordListBox"/>
-                    <User_Controls:CalculationPanel Grid.Column="5" Grid.RowSpan="2" VerticalAlignment="Top" Height="285" x:Name="GasCalculations"/>
+                    <DataGrid ItemsSource="{Binding FilteredGasRecords, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1,10,1,1" AlternatingRowBackground="#0f000000">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat=\dd-MMM-yy \HH:mm}"       Header="Date"    Width="*" SortDirection="Descending" FontWeight="Bold"/>
+                            <DataGridTextColumn Binding="{Binding TopUp, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"      Header="Top Up"  Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Balance, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"    Header="Balance" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <User_Controls:CalculationPanel Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Records="{Binding FilteredGasRecords, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Electricity Records" FontFamily="Candara">
+            <TabItem Header="Electricity Records">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="10" />
-                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="Record Date / Time" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <TextBlock Text="Balance" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <TextBlock Text="Top Up Value" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="14" FontFamily="Candara"/>
-                    <ListBox Grid.Row="1" Grid.ColumnSpan="3" Name="ElectricRecordListBox" />
-                    <User_Controls:CalculationPanel Grid.Column="4" Grid.RowSpan="2" VerticalAlignment="Top" Height="285" x:Name="ElectricCalculations"/>
+                    <DataGrid ItemsSource="{Binding FilteredElectricRecords, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" AlternatingRowBackground="#0f000000" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1,10,1,1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat=\dd-MMM-yy \HH:mm}"       Header="Date"    Width="*" SortDirection="Descending"/>
+                            <DataGridTextColumn Binding="{Binding TopUp, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"      Header="Top Up"  Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Balance, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"    Header="Balance" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <User_Controls:CalculationPanel Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Records="{Binding FilteredElectricRecords, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
             </TabItem>
         </TabControl>
+        <ComboBox Grid.Row="0" Grid.Column="1" Name="TimePeriodSelector" HorizontalAlignment="Stretch" Margin="5,2" Padding="10,0" VerticalAlignment="Stretch" ItemsSource="{Binding DatePeriodFilters}" SelectedItem="{Binding SelectedDatePeriodFilter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <ia:Interaction.Triggers>
+                <ia:EventTrigger EventName="SelectionChanged">
+                    <ia:InvokeCommandAction Command="{Binding SelectedDatePeriodFilterChangedCommand}"/>
+                </ia:EventTrigger>
+            </ia:Interaction.Triggers>
+        </ComboBox>
     </Grid>
 </Controls:MetroWindow>

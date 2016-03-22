@@ -77,23 +77,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Objects\DatePeriodFilter.cs" />
+    <Compile Include="Objects\Record.cs" />
+    <Compile Include="Objects\RecordType.cs" />
+    <Compile Include="Objects\RelayCommand.cs" />
+    <Compile Include="StaticObjects\Extensions.cs" />
     <Compile Include="User Controls\CalculationPanel.xaml.cs">
       <DependentUpon>CalculationPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="XML\XMLHandle.cs" />
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="User Controls\CalculationPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="User Controls\RecordObject.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\AddRecord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,12 +102,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="User Controls\RecordObject.xaml.cs">
-      <DependentUpon>RecordObject.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\AddRecord.xaml.cs">
-      <DependentUpon>AddRecord.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -150,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLs\System.Windows.Interactivity.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

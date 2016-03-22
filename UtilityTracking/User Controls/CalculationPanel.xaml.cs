@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
+
+using UtilityTracking.Objects;
 
 namespace UtilityTracking.User_Controls
 {
@@ -22,7 +25,9 @@ namespace UtilityTracking.User_Controls
     /// </summary>
     public partial class CalculationPanel : UserControl, INotifyPropertyChanged
     {
-        public int m_records = 0;
+        private static readonly DependencyProperty RecordsProperty = DependencyProperty.RegisterAttached("Records", typeof(ObservableCollection<Record>), typeof(CalculationPanel), new PropertyMetadata(null, new PropertyChangedCallback(RecordsChanged)));
+
+        private int m_records = 0;
         private double m_totalCost = 0.0;
         private double m_payments = 0.0;
         private double m_dailyCost = 0.0;
@@ -41,8 +46,29 @@ namespace UtilityTracking.User_Controls
         public CalculationPanel()
         {
             InitializeComponent();
+            
+            this.Loaded += CalculationPanel_Loaded;
+        }
 
-            DataContext = this;
+        void CalculationPanel_Loaded(object sender, RoutedEventArgs e)
+        {
+            Calculate();
+        }
+
+        //PropertyChanged event handler to get the old value
+        private static void RecordsChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs eventArgs)
+        {
+            (dependencyObject as CalculationPanel).Calculate();
+        }
+
+        public ObservableCollection<Record> Records
+        {
+            get { return (ObservableCollection<Record>)GetValue(RecordsProperty); }
+            set 
+            {
+                SetValue(RecordsProperty, value);
+                NotifyPropertyChanged("Records");
+            }
         }
 
         public int RecordsCount
@@ -111,41 +137,40 @@ namespace UtilityTracking.User_Controls
 
         }
 
-        public void Calculate(List<RecordObject> records)
+        public void Calculate()
         {
-            RecordsCount = records.Count();
-            
-            IEnumerable<RecordObject> sortedList = SortList(records);
-
-            TotalPayments = SumOfTopUps(sortedList.Where(r => r.TopUp > 0));
-
-            TotalCost = ((sortedList.First().Balance - sortedList.Last().Balance) + TotalPayments) - sortedList.First().TopUp;
-
-            DailyCost = CalculateDailyAvg(sortedList);
-
-            MonthlyCost = m_dailyCost * Properties.Settings.Default.DaysPerMonth;
-
-            YearlyCost = m_dailyCost * Properties.Settings.Default.DaysPerYear;
-
-            
+            if (Records.Count() > 0)
+            {
+                RecordsCount = Records.Count();
+                List<Record> SortedRecords = Records.OrderBy(r => r.Date).ToList();
+                TotalPayments = SumOfTopUps();
+                TotalCost = ((SortedRecords.First().Balance - SortedRecords.Last().Balance) + TotalPayments) - SortedRecords.First().TopUp;
+                DailyCost = CalculateDailyAvg(SortedRecords);
+                MonthlyCost = m_dailyCost * Properties.Settings.Default.DaysPerMonth;
+                YearlyCost = m_dailyCost * Properties.Settings.Default.DaysPerYear;
+            }
+            else
+            {
+                RecordsCount = 0;
+                TotalPayments = 0;
+                TotalCost = 0;
+                DailyCost = 0;
+                MonthlyCost = 0;
+                YearlyCost = 0;
+            }
         }
 
-        private IEnumerable<RecordObject> SortList(List<RecordObject> Records)
-        {
-            return Records.OrderBy(r => r.RecordDateTime);
-        }
-
-        private double SumOfTopUps(IEnumerable<RecordObject> RecordList)
+        private double SumOfTopUps()
         {
             double total = 0.0;
-            foreach (RecordObject r in RecordList)
+            foreach (Record r in Records)
             {
                 total += r.TopUp;
             }
             return total;
         }
 
-        private double CalculateDailyAvg(IEnumerable<RecordObject> records)
+        private double CalculateDailyAvg(List<Record> records)
         {
             double totalWeight = 0.0;
             double totalCost = 0.0;
@@ -156,8 +181,8 @@ namespace UtilityTracking.User_Controls
                 double endBalance = records.ElementAt(i + 1).Balance;
                 double endTopUp = records.ElementAt(i + 1).TopUp;
 
-                DateTime startDateTime = records.ElementAt(i).RecordDateTime;
-                DateTime endDateTime = records.ElementAt(i + 1).RecordDateTime;
+                DateTime startDateTime = records.ElementAt(i).Date;
+                DateTime endDateTime = records.ElementAt(i + 1).Date;
 
                 TimeSpan timeDiff = endDateTime - startDateTime;
 
