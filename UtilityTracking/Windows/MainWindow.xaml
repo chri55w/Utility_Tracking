@@ -12,6 +12,7 @@
         MinHeight="420"
         MinWidth="740"
         WindowStartupLocation="CenterScreen"
+        Icon="/UtilityTracking;component/App_Icon.ico"
     >
     <Controls:MetroWindow.Resources>
         <Style x:Key="MyCleanWindowStyle" TargetType="{x:Type Controls:MetroWindow}" BasedOn="{StaticResource CleanWindowStyleKey}" />
@@ -94,7 +95,7 @@
                     </Grid.ColumnDefinitions>
                     <DataGrid ItemsSource="{Binding FilteredElectricRecords, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" AlternatingRowBackground="#0f000000" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1,10,1,1">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat=\dd-MMM-yy \HH:mm}"       Header="Date"    Width="*" SortDirection="Descending"/>
+                            <DataGridTextColumn Binding="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat=\dd-MMM-yy \HH:mm}"       Header="Date"    Width="*" SortDirection="Descending" FontWeight="Bold"/>
                             <DataGridTextColumn Binding="{Binding TopUp, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"      Header="Top Up"  Width="*"/>
                             <DataGridTextColumn Binding="{Binding Balance, UpdateSourceTrigger=PropertyChanged, StringFormat=\£{0:0.00}}"    Header="Balance" Width="*"/>
                         </DataGrid.Columns>
